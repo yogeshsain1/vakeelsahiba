@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Vakeelsahiba</title>
+    <meta name="description" content="Admin dashboard for managing Vakeelsahiba contact submissions">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <div class="admin-logo">
+                    <i class="fas fa-scale-balanced"></i>
+                    <span>Vakeelsahiba</span>
+                </div>
+                <div class="admin-user-info">
+                    <div class="admin-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="admin-user-details">
+                        <span class="admin-username" id="currentUsername">Loading...</span>
+                        <span class="admin-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="admin-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#dashboard" data-section="dashboard">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#submissions" data-section="submissions">
+                            <i class="fas fa-inbox"></i>
+                            <span>Contact Submissions</span>
+                            <span class="admin-badge" id="newSubmissionsCount">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#urgent" data-section="urgent">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Urgent Cases</span>
+                            <span class="admin-badge urgent" id="urgentCasesCount">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#analytics" data-section="analytics">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings" data-section="settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="admin-sidebar-footer">
+                <button class="admin-logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="admin-header-left">
+                    <button class="admin-sidebar-toggle" id="sidebarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="pageTitle">Dashboard</h1>
+                </div>
+                
+                <div class="admin-header-right">
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search submissions..." id="searchInput">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    
+                    <div class="admin-notifications">
+                        <button class="admin-notification-btn" id="notificationBtn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-count" id="notificationCount">0</span>
+                        </button>
+                    </div>
+                    
+                    <div class="admin-profile-menu">
+                        <button class="admin-profile-btn" id="profileBtn">
+                            <i class="fas fa-user-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="admin-content">
+                <!-- Dashboard Section -->
+                <section id="dashboard-section" class="admin-section active">
+                    <div class="admin-stats-grid">
+                        <div class="admin-stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-inbox"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 id="totalSubmissions">0</h3>
+                                <p>Total Submissions</p>
+                                <span class="stat-change positive" id="submissionsChange">+0%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="admin-stat-card">
+                            <div class="stat-icon urgent">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 id="urgentCases">0</h3>
+                                <p>Urgent Cases</p>
+                                <span class="stat-change negative" id="urgentChange">0</span>
+                            </div>
+                        </div>
+                        
+                        <div class="admin-stat-card">
+                            <div class="stat-icon success">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 id="resolvedCases">0</h3>
+                                <p>Resolved Cases</p>
+                                <span class="stat-change positive" id="resolvedChange">+0%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="admin-stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3 id="todaySubmissions">0</h3>
+                                <p>Today's Submissions</p>
+                                <span class="stat-change" id="todayChange">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-dashboard-grid">
+                        <div class="admin-card">
+                            <h3>Recent Submissions</h3>
+                            <div class="admin-table-container">
+                                <table class="admin-table" id="recentSubmissionsTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Service</th>
+                                            <th>Urgency</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="recentSubmissionsBody">
+                                        <tr>
+                                            <td colspan="6" class="loading">Loading submissions...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="admin-card">
+                            <h3>Service Breakdown</h3>
+                            <div class="service-stats" id="serviceStats">
+                                <div class="loading">Loading service statistics...</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Submissions Section -->
+                <section id="submissions-section" class="admin-section">
+                    <div class="admin-section-header">
+                        <h2>Contact Submissions</h2>
+                        <div class="admin-filters">
+                            <select id="statusFilter">
+                                <option value="">All Status</option>
+                                <option value="new">New</option>
+                                <option value="contacted">Contacted</option>
+                                <option value="resolved">Resolved</option>
+                            </select>
+                            <select id="urgencyFilter">
+                                <option value="">All Urgency</option>
+                                <option value="normal">Normal</option>
+                                <option value="urgent">Urgent</option>
+                                <option value="emergency">Emergency</option>
+                            </select>
+                            <select id="serviceFilter">
+                                <option value="">All Services</option>
+                                <option value="civil-disputes">Civil Disputes</option>
+                                <option value="criminal-cases">Criminal Cases</option>
+                                <option value="corporate-matters">Corporate Matters</option>
+                                <option value="matrimonial-disputes">Matrimonial Disputes</option>
+                                <option value="sarfaesi-bank">SARFAESI & Bank</option>
+                                <option value="arbitration">Arbitration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-card">
+                        <div class="admin-table-container">
+                            <table class="admin-table" id="submissionsTable">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Service</th>
+                                        <th>Urgency</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="submissionsBody">
+                                    <tr>
+                                        <td colspan="9" class="loading">Loading submissions...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="admin-pagination" id="pagination">
+                            <!-- Pagination will be generated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Urgent Cases Section -->
+                <section id="urgent-section" class="admin-section">
+                    <div class="admin-section-header">
+                        <h2>Urgent Cases</h2>
+                        <div class="urgent-alert">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>These cases require immediate attention</span>
+                        </div>
+                    </div>
+                    
+                    <div class="admin-card">
+                        <div class="admin-table-container">
+                            <table class="admin-table urgent-table" id="urgentTable">
+                                <thead>
+                                    <tr>
+                                        <th>Priority</th>
+                                        <th>Name</th>
+                                        <th>Contact</th>
+                                        <th>Service</th>
+                                        <th>Hours Since</th>
+                                        <th>Message</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="urgentBody">
+                                    <tr>
+                                        <td colspan="7" class="loading">Loading urgent cases...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Analytics Section -->
+                <section id="analytics-section" class="admin-section">
+                    <div class="admin-section-header">
+                        <h2>Analytics & Reports</h2>
+                    </div>
+                    
+                    <div class="analytics-grid">
+                        <div class="admin-card">
+                            <h3>Submission Trends</h3>
+                            <div class="chart-container" id="trendsChart">
+                                <div class="loading">Loading chart...</div>
+                            </div>
+                        </div>
+                        
+                        <div class="admin-card">
+                            <h3>Service Distribution</h3>
+                            <div class="chart-container" id="serviceChart">
+                                <div class="loading">Loading chart...</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Settings Section -->
+                <section id="settings-section" class="admin-section">
+                    <div class="admin-section-header">
+                        <h2>Settings</h2>
+                    </div>
+                    
+                    <div class="settings-grid">
+                        <div class="admin-card">
+                            <h3>Profile Settings</h3>
+                            <form id="profileForm">
+                                <div class="admin-form-group">
+                                    <label for="profileUsername">Username</label>
+                                    <input type="text" id="profileUsername" name="username" readonly>
+                                </div>
+                                <div class="admin-form-group">
+                                    <label for="profileEmail">Email</label>
+                                    <input type="email" id="profileEmail" name="email">
+                                </div>
+                                <button type="submit" class="admin-btn">Update Profile</button>
+                            </form>
+                        </div>
+                        
+                        <div class="admin-card">
+                            <h3>Change Password</h3>
+                            <form id="passwordForm">
+                                <div class="admin-form-group">
+                                    <label for="currentPassword">Current Password</label>
+                                    <input type="password" id="currentPassword" name="currentPassword" required>
+                                </div>
+                                <div class="admin-form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" id="newPassword" name="newPassword" required>
+                                </div>
+                                <div class="admin-form-group">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                </div>
+                                <button type="submit" class="admin-btn">Change Password</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Submission Detail Modal -->
+    <div id="submissionModal" class="admin-modal">
+        <div class="admin-modal-content">
+            <div class="admin-modal-header">
+                <h3>Submission Details</h3>
+                <button class="admin-modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="admin-modal-body" id="modalBody">
+                <!-- Content will be loaded by JavaScript -->
+            </div>
+            <div class="admin-modal-footer">
+                <button class="admin-btn secondary" id="modalCancel">Close</button>
+                <button class="admin-btn" id="modalSave">Update Status</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>

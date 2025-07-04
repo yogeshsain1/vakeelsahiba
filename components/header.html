@@ -1,0 +1,81 @@
+<!-- Header Component -->
+<div id="header-container">
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Brand Logo -->
+                <div class="navbar-brand">
+                    <div class="d-flex align-items-center">
+                        <div class="brand-logo animate-pulse">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="brand-text">
+                            <h3>Vakeelsahiba</h3>
+                            <p class="brand-subtitle">Advocates, Solicitors & Consultants</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-header d-none d-lg-block slide-in-right">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@vakeelsahiba.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91-7903913501</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://wa.me/917903913501" class="social-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="navbar-nav-container">
+                <ul class="navbar-nav">
+                    <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="services.html" class="nav-link" data-page="services">Practices</a></li>
+                    <li><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                    <li><a href="about.html#attorneys" class="nav-link" data-page="attorneys">Attorney</a></li>
+                    <li><a href="#" class="nav-link" data-page="bare-acts">Bare Acts</a></li>
+                    <li><a href="#" class="nav-link" data-page="events">Events</a></li>
+                    <li><a href="blog/index.html" class="nav-link" data-page="blog">Blogs</a></li>
+                    <li><a href="contact.html" class="nav-link" data-page="contact">Contact</a></li>
+                    <li><a href="admin/login.html" class="nav-link" data-page="admin-login"><i class="fas fa-user-shield"></i> Admin Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close mobile menu">
+        <i class="fas fa-times"></i>
+    </button>
+    <ul class="mobile-menu-nav">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href="services.html"><i class="fas fa-briefcase"></i> Practices</a></li>
+        <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+        <li><a href="about.html#attorneys"><i class="fas fa-user-tie"></i> Attorney</a></li>
+        <li><a href="#"><i class="fas fa-book"></i> Bare Acts</a></li>
+        <li><a href="#"><i class="fas fa-calendar"></i> Events</a></li>
+        <li><a href="blog/index.html"><i class="fas fa-blog"></i> Blogs</a></li>
+        <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+        <li><a href="admin/login.html"><i class="fas fa-user-shield"></i> Admin Login</a></li>
+    </ul>
+</div>

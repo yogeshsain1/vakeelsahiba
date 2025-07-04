@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Vakeelsahiba</title>
+    <meta name="description" content="Admin panel login for Vakeelsahiba legal services">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="admin-login-container">
+        <div class="admin-login-form">
+            <div class="admin-login-header">
+                <h2>
+                    <div class="admin-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    Admin Login
+                </h2>
+                <p>Access the Vakeelsahiba administration panel</p>
+            </div>
+            
+            <form id="adminLoginForm" autocomplete="off">
+                <div class="admin-form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required autofocus>
+                    <i class="fas fa-user input-icon"></i>
+                </div>
+                
+                <div class="admin-form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <i class="fas fa-lock input-icon"></i>
+                </div>
+                
+                <div class="admin-checkbox-group">
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe">Remember me for 30 days</label>
+                </div>
+                
+                <button type="submit" class="admin-btn" id="loginButton">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span class="btn-text">Sign In</span>
+                </button>
+                
+                <div id="loginError" class="admin-error"></div>
+                <div id="loginSuccess" class="admin-success"></div>
+            </form>
+            
+            <div class="admin-login-footer">
+                <p>&copy; 2025 Vakeelsahiba. All rights reserved.</p>
+                <p style="margin-top: 1rem; font-size: 0.8rem; color: #9ca3af;">
+                    <strong>Demo Credentials:</strong><br>
+                    Username: admin | Password: Admin@123<br>
+                    Username: yogesh | Password: Yogesh@123
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/admin-login.js"></script>
+</body>
+</html>
