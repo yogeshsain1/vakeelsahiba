@@ -1,4 +1,4 @@
-// Contact form handling with mobile optimizations
+/**
 class ContactFormHandler {
     constructor() {
         this.form = document.getElementById('contactForm');
@@ -330,7 +330,7 @@ class ContactFormHandler {
         
         try {
             const formData = new FormData(this.form);
-            const response = await fetch('api/contact.php', {
+            const response = await fetch(CONFIG.getApiUrl('CONTACT'), {
                 method: 'POST',
                 body: formData
             });

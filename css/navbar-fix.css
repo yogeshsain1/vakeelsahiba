@@ -1,0 +1,402 @@
+/* CLEAN HORIZONTAL NAVBAR - MATCHING YOUR REFERENCE STYLE */
+
+/* Reset any conflicting styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Container with proper max-width */
+.navbar-topbar .container,
+.navbar .container {
+  max-width: 1400px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 32px !important;
+}
+
+/* Top Bar - Clean Professional Design */
+.navbar-topbar {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  padding: 12px 0 !important;
+  position: relative !important;
+  z-index: 1100 !important;
+  box-shadow: none !important;
+}
+
+.navbar-topbar .container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+/* Top Bar Brand Section - Clean Layout */
+.topbar-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex: 0 0 auto !important;
+}
+
+.topbar-logo {
+  width: 48px !important;
+  height: 48px !important;
+  background: #3b82f6 !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+  font-size: 20px !important;
+  transition: all 0.2s ease !important;
+}
+
+.topbar-text h4 {
+  color: #1f2937 !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+.topbar-tagline {
+  color: #6b7280 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+  text-transform: none !important;
+}
+
+/* Contact & Social Section - Horizontal Layout */
+.topbar-contact-social {
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px !important;
+  flex: 0 0 auto !important;
+}
+
+.contact-info {
+  display: flex !important;
+  gap: 20px !important;
+  align-items: center !important;
+}
+
+.contact-info span {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: #4b5563 !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  white-space: nowrap !important;
+}
+
+.contact-info i {
+  color: #f59e0b !important;
+  font-size: 14px !important;
+  width: 16px !important;
+  text-align: center !important;
+}
+
+.social-links {
+  display: flex !important;
+  gap: 8px !important;
+  align-items: center !important;
+}
+
+.social-links a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 6px !important;
+  color: #64748b !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+.social-links a:hover {
+  background: #3b82f6 !important;
+  color: white !important;
+  border-color: #3b82f6 !important;
+}
+
+/* Main Navbar - Clean Horizontal Style */
+.navbar {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1050 !important;
+  padding: 0 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04) !important;
+}
+
+.navbar-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 60px !important;
+  padding: 0 !important;
+}
+
+/* Navigation Container - Clean Horizontal Layout */
+.navbar-nav-container {
+  width: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+.navbar-nav {
+  display: flex !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-items: center !important;
+  gap: 0 !important;
+  background: none !important;
+}
+
+.navbar-nav li {
+  margin: 0 !important;
+}
+
+/* Navigation Links - Clean Horizontal Style */
+.nav-link {
+  color: #374151 !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  padding: 18px 20px !important;
+  font-size: 15px !important;
+  transition: all 0.2s ease !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  border-bottom: 3px solid transparent !important;
+  white-space: nowrap !important;
+}
+
+.nav-link::before,
+.nav-link::after {
+  display: none !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #3b82f6 !important;
+  border-bottom-color: #f59e0b !important;
+  background: rgba(59, 130, 246, 0.03) !important;
+}
+
+/* Special Admin Login Button */
+.nav-link.admin-login {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 6px !important;
+  margin-left: 16px !important;
+  padding: 12px 18px !important;
+  color: #374151 !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  font-weight: 600 !important;
+}
+
+.nav-link.admin-login:hover {
+  background: #3b82f6 !important;
+  color: white !important;
+  border-color: #3b82f6 !important;
+  border-bottom-color: #3b82f6 !important;
+}
+
+.nav-link.admin-login i {
+  font-size: 14px !important;
+}
+
+/* Mobile Brand */
+.navbar-brand-mobile {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+}
+
+.brand-logo-mobile {
+  width: 40px !important;
+  height: 40px !important;
+  background: #3b82f6 !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+  font-size: 16px !important;
+}
+
+.brand-text-mobile h3 {
+  color: #1f2937 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 6px !important;
+  padding: 10px !important;
+  color: #374151 !important;
+  font-size: 18px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle.active {
+  background: #3b82f6 !important;
+  color: white !important;
+  border-color: #3b82f6 !important;
+}
+
+/* Active/Current Page Styling */
+.nav-link.current,
+.nav-link[aria-current="page"] {
+  color: #3b82f6 !important;
+  border-bottom-color: #f59e0b !important;
+  background: rgba(59, 130, 246, 0.05) !important;
+  font-weight: 600 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1399px) {
+  .navbar-topbar .container,
+  .navbar .container {
+    max-width: 1200px !important;
+    padding: 0 24px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar-topbar .container,
+  .navbar .container {
+    max-width: 960px !important;
+    padding: 0 20px !important;
+  }
+  
+  .contact-info {
+    gap: 16px !important;
+  }
+  
+  .contact-info span {
+    font-size: 13px !important;
+  }
+  
+  .nav-link {
+    padding: 16px 16px !important;
+    font-size: 14px !important;
+  }
+  
+  .topbar-text h4 {
+    font-size: 22px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-topbar {
+    display: none !important;
+  }
+  
+  .navbar-nav-container {
+    display: none !important;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .navbar-content {
+    justify-content: space-between !important;
+    min-height: 56px !important;
+  }
+  
+  .navbar {
+    padding: 8px 0 !important;
+  }
+  
+  .navbar .container {
+    padding: 0 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    padding: 0 12px !important;
+  }
+  
+  .brand-logo-mobile {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 14px !important;
+  }
+  
+  .brand-text-mobile h3 {
+    font-size: 16px !important;
+  }
+  
+  .mobile-menu-toggle {
+    padding: 8px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* Ensure clean layout */
+body {
+  overflow-x: hidden !important;
+}
+
+.navbar-topbar,
+.navbar {
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+/* Remove any gradient text effects */
+.topbar-text h4,
+.topbar-tagline,
+.nav-link {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+}
+
+/* Ensure proper link styling */
+a.nav-link {
+  text-decoration: none !important;
+}
+
+/* Clean hover states */
+.nav-link:focus {
+  outline: 2px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}

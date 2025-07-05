@@ -7,8 +7,10 @@
     <meta name="description" content="Get in touch with Vakeelsahiba for expert legal consultation and services. Contact our experienced legal team in Bihar for civil, criminal, corporate, and matrimonial cases.">
     
     <!-- CSS -->
+    <link rel="stylesheet" href="css/style-fixes.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/contact.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -74,252 +76,166 @@
         </div>
     </section>
 
-    <!-- Contact Information Section -->
-    <section class="section contact-info-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <div class="contact-info-card fade-in">
-                        <div class="contact-info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h3>Our Location</h3>
-                        <p>Vakeelsahiba, Rose Garden Plaza, 42 MG Road, Civil Lines, Patna, Bihar 800001</p>
-                        <a href="https://maps.google.com/?q=Rose+Garden+Plaza+42+MG+Road+Civil+Lines+Patna+Bihar" target="_blank" class="btn btn-primary">Get Directions</a>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="contact-info-card fade-in delay-200">
-                        <div class="contact-info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h3>Call Us</h3>
-                        <p>Ready to discuss your legal needs? Call us directly for immediate assistance.</p>
-                        <a href="tel:+917903913501" class="contact-phone">+91-7903913501</a>
-                        <a href="https://wa.me/917903913501" class="btn btn-accent mt-3">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="contact-info-card fade-in delay-400">
-                        <div class="contact-info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Email Us</h3>
-                        <p>Send us your queries and we'll get back to you within 24 hours.</p>
-                        <a href="mailto:info@vakeelsahiba.com" class="contact-email">info@vakeelsahiba.com</a>
-                        <div class="office-hours mt-3">
-                            <h5>Office Hours</h5>
-                            <p>Mon - Sat: 9:00 AM - 6:00 PM<br>Sunday: By Appointment</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section class="section contact-form-section" style="background: var(--background-light);">
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <div class="contact-form-container slide-in-left">
-                        <h2>Get Legal Help Today</h2>
-                        <p class="lead">Fill out the form below and our legal experts will contact you within 24 hours.</p>
-                        
-                        <form class="contact-form" data-contact="true" id="contactForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName">First Name *</label>
-                                    <input type="text" id="firstName" name="firstName" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">Last Name *</label>
-                                    <input type="text" id="lastName" name="lastName" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number *</label>
-                                    <input type="tel" id="phone" name="phone" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="legalService">Legal Service Needed</label>
-                                <select id="legalService" name="legalService">
-                                    <option value="">Select a service</option>
-                                    <option value="civil-disputes">Civil Disputes</option>
-                                    <option value="criminal-cases">Criminal Cases</option>
-                                    <option value="corporate-matters">Corporate Matters</option>
-                                    <option value="matrimonial-disputes">Matrimonial Disputes</option>
-                                    <option value="sarfaesi-bank">SARFAESI & Bank Matters</option>
-                                    <option value="arbitration">Arbitration</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="urgency">Urgency Level</label>
-                                <select id="urgency" name="urgency">
-                                    <option value="normal">Normal (Response within 48 hours)</option>
-                                    <option value="urgent">Urgent (Response within 24 hours)</option>
-                                    <option value="emergency">Emergency (Immediate response)</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Describe Your Legal Issue *</label>
-                                <textarea id="message" name="message" rows="6" placeholder="Please provide details about your legal matter, including any relevant dates, parties involved, and specific concerns..." required></textarea>
-                            </div>
-                            
-                            <div class="form-group form-checkbox">
-                                <input type="checkbox" id="privacy" name="privacy" required>
-                                <label for="privacy">I agree to the <a href="#" target="_blank">Privacy Policy</a> and consent to my information being used for legal consultation purposes.</label>
-                            </div>
-                            
-                            <div class="form-group form-checkbox">
-                                <input type="checkbox" id="updates" name="updates">
-                                <label for="updates">I would like to receive updates about legal matters and services via email.</label>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-lg">
-                                <i class="fas fa-paper-plane"></i>
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="col-6">
-                    <div class="contact-sidebar slide-in-right">
-                        <div class="contact-card">
-                            <h3><i class="fas fa-shield-alt"></i> Why Choose Us?</h3>
-                            <ul class="features-list">
-                                <li><i class="fas fa-check"></i> 24+ Years of Legal Experience</li>
-                                <li><i class="fas fa-check"></i> 95% Success Rate</li>
-                                <li><i class="fas fa-check"></i> Expert Legal Team</li>
-                                <li><i class="fas fa-check"></i> Transparent Fee Structure</li>
-                                <li><i class="fas fa-check"></i> Confidential Consultation</li>
-                                <li><i class="fas fa-check"></i> Quick Response Time</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="contact-card">
-                            <h3><i class="fas fa-clock"></i> Response Times</h3>
-                            <div class="response-time">
-                                <div class="time-item">
-                                    <span class="time-label">Phone Calls:</span>
-                                    <span class="time-value">Immediate</span>
-                                </div>
-                                <div class="time-item">
-                                    <span class="time-label">WhatsApp:</span>
-                                    <span class="time-value">Within 1 hour</span>
-                                </div>
-                                <div class="time-item">
-                                    <span class="time-label">Email:</span>
-                                    <span class="time-value">Within 24 hours</span>
-                                </div>
-                                <div class="time-item">
-                                    <span class="time-label">Emergency:</span>
-                                    <span class="time-value">Immediate</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-card">
-                            <h3><i class="fas fa-calendar-alt"></i> Schedule Consultation</h3>
-                            <p>Prefer to meet in person? Schedule a consultation at our office.</p>
-                            <a href="tel:+917903913501" class="btn btn-accent">
-                                <i class="fas fa-phone"></i> Call to Schedule
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section faq-section">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2>Frequently Asked Questions</h2>
-                <p>Quick answers to common questions about our legal services</p>
+    <!-- Contact Form Section - Based on provided image design -->
+    <section class="contact-form-section">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- Left Side - Send Us a Message -->
+          <div class="message-form-container">
+            <div class="form-header">
+              <h2>Send Us a Message</h2>
+              <p>Fill out the form below and we'll get back to you shortly.</p>
             </div>
             
-            <div class="faq-container">
-                <div class="faq-item fade-in">
-                    <div class="faq-question">
-                        <h4>How much does a consultation cost?</h4>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We offer a free initial consultation for new clients. During this 30-minute session, we'll discuss your legal matter and provide preliminary advice on how we can help.</p>
-                    </div>
+            <form class="contact-message-form" id="contactForm" data-contact="true">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fullName">Full Name</label>
+                  <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
                 </div>
-                
-                <div class="faq-item fade-in delay-200">
-                    <div class="faq-question">
-                        <h4>What should I bring to my consultation?</h4>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Please bring any relevant documents related to your case, including contracts, court papers, correspondence, and identification. The more information you provide, the better we can assess your situation.</p>
-                    </div>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
-                
-                <div class="faq-item fade-in delay-400">
-                    <div class="faq-question">
-                        <h4>How quickly can you respond to urgent matters?</h4>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>For emergency legal matters, we provide immediate response. Call our office directly at +91-7903913501, and our team will prioritize your case accordingly.</p>
-                    </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
                 </div>
-                
-                <div class="faq-item fade-in delay-600">
-                    <div class="faq-question">
-                        <h4>Do you handle cases outside of Bihar?</h4>
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, we handle cases in various jurisdictions. Our team has experience practicing in multiple states and can represent clients in different courts as needed.</p>
-                    </div>
+                <div class="form-group">
+                  <label for="company">Company Name</label>
+                  <input type="text" id="company" name="company" placeholder="Enter your company name">
                 </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="service">Service Interest</label>
+                <select id="service" name="service" class="form-select">
+                  <option value="">Select a Service</option>
+                  <option value="civil-litigation">Civil Litigation</option>
+                  <option value="criminal-defense">Criminal Defense</option>
+                  <option value="corporate-law">Corporate Law</option>
+                  <option value="family-law">Family & Matrimonial Law</option>
+                  <option value="property-law">Property Law</option>
+                  <option value="banking-law">Banking & SARFAESI</option>
+                  <option value="arbitration">Arbitration</option>
+                  <option value="intellectual-property">Intellectual Property</option>
+                  <option value="other">Other Legal Services</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Type your message here" required></textarea>
+              </div>
+              
+              <div class="captcha-group">
+                <div class="captcha-box">
+                  <span class="captcha-text">b3zZJ9</span>
+                  <button type="button" class="captcha-refresh">
+                    <i class="fas fa-sync-alt"></i>
+                  </button>
+                </div>
+                <input type="text" name="captcha" placeholder="Enter Captcha" required>
+              </div>
+              
+              <button type="submit" class="send-message-btn">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+              
+              <div id="form-status" class="form-status"></div>
+            </form>
+          </div>
+          
+          <!-- Right Side - Get in Touch -->
+          <div class="get-in-touch-container">
+            <div class="touch-header">
+              <h2>Get in Touch</h2>
+              <p>We'd love to hear from you. Here's how you can reach us.</p>
             </div>
+            
+            <div class="contact-info-sections">
+              <!-- Office Locations -->
+              <div class="info-section">
+                <div class="info-icon location-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Office Locations</h3>
+                  <p>Rose Garden Plaza, 42 MG Road, Civil Lines, Patna, Bihar 800001</p>
+                  <p class="secondary-text">Additional offices in New Delhi & Kolkata</p>
+                </div>
+              </div>
+              
+              <!-- Business Hours -->
+              <div class="info-section">
+                <div class="info-icon hours-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Business Hours</h3>
+                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  <p class="secondary-text">Weekend: By Appointment</p>
+                </div>
+              </div>
+              
+              <!-- Connect With Us -->
+              <div class="info-section">
+                <div class="social-header">
+                  <h3>Connect With Us</h3>
+                </div>
+                <div class="social-links-grid">
+                  <a href="#" class="social-link linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="#" class="social-link twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="social-link facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="https://wa.me/917903913501" class="social-link instagram">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <!-- Need Immediate Help -->
+              <div class="immediate-help">
+                <h3>Need Immediate Help?</h3>
+                <div class="help-options">
+                  <a href="tel:+917903913501" class="help-option">
+                    <div class="help-icon">
+                      <i class="fas fa-phone"></i>
+                    </div>
+                    <span>Schedule a Call</span>
+                  </a>
+                  <a href="mailto:info@vakeelsahiba.com" class="help-option">
+                    <div class="help-icon">
+                      <i class="fas fa-comments"></i>
+                    </div>
+                    <span>Live Chat Support</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Contact CTA Section -->
-    <section class="section contact-cta-section" style="background: var(--gradient-primary); color: white;">
-        <div class="container text-center">
-            <div class="fade-in">
-                <h2 style="color: white;">Ready to Get Started?</h2>
-                <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem;">Don't let legal issues overwhelm you. Contact us today for expert legal guidance and representation you can trust.</p>
-                <div class="cta-buttons">
-                    <a href="tel:+917903913501" class="btn btn-accent btn-lg">
-                        <i class="fas fa-phone"></i> Call Now
-                    </a>
-                    <a href="https://wa.me/917903913501" class="btn btn-secondary btn-lg">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
+   
 
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
     <!-- JavaScript -->
+    <script src="js/config.js"></script>
     <script src="js/components.js"></script>
     <script src="js/contact-form.js"></script>
     <script src="js/utils.js"></script>

@@ -49,7 +49,7 @@ class AdminLogin {
     
     async validateToken(token) {
         try {
-            const response = await fetch('../api/admin.php', {
+            const response = await fetch(CONFIG.getApiUrl('ADMIN'), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ class AdminLogin {
         this.clearMessages();
         
         try {
-            const response = await fetch('../api/admin.php', {
+            const response = await fetch(CONFIG.getApiUrl('ADMIN'), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
